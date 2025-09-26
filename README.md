@@ -18,7 +18,7 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
   - MOUSE_BUTTON_MIDDLE
   - MOUSE_BUTTON_RIGHT
 
-* Graviti Text
+* Graviti Teks
   - TEXT_GRAVITY_TOP
   - TEXT_GRAVITY_CENTER_TOP
   - TEXT_GRAVITY_RIGHT_TOP
@@ -28,4 +28,77 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
   - TEXT_GRAVITY_LEFT_BOTTOM
   - TEXT_GRAVITY_CENTER_BOTTOM
   - TEXT_GRAVITY_RIGHT_BOTTOM
+
+* Fungsi Window
+  - CreateWindow(title)
+  - CreateWindow(title, width, height)
+  - CreateWindow(title, x, y, width, height)
+  - ClearWindow()
+  - RefreshWindow()
+  - CloseWindow()
+  - GetWindowTitle()
+  - GetX()
+  - GetY()
+  - GetWindowWidth()
+  - GetWindowHeight()
+
+* Fungsi Kawalan Masa
+  - SetFrameRate(fps)
+  - Delay(ms)
+
+* Fungsi Warna dan Lukisan
+  - SetBackgroundWindow(color), GetBackgroundWindow()
+  - SetColor(color), SetColor(color, alpha)
+  - SetFillColor(color), SetColor(color, alpha)
+  - SetCurrentColor(color), SetCurrentColor(color, fill)
+  - SetAntialias(antialias)
+  - SetStroke(size)
+  - SetFilled(fill)
+
+* Fungsi Teks
+  - SetFontName(name)
+  - SetFontStyle(style)
+  - SetFontSize(size)
+  - SetTextGravity(gravity)
+  - GetTextWidth(text)
+  - GetTextHeight(text)
+  - Text(text, x, y)
+  - Text(text)
+
+* Fungsi Bentuk
+  - Point(x, y)
+  - Line(x1, y1, x2, y2)
+  - Rectangle(x1, y1, x2, y2)
+  - Square(x, y, size)
+  - Circle(x, y, radius)
+  - Ellipse(x, y, w, h)
+  - Polygon(x[], y[], num)
+  - Polygon(x[], y[])
+  - Triangle(x1, y1, x2, y2, x3, y3)
+  - Arc(x, y, w, h, start, sweep)
+  - Arc(x, y, radius, start, sweep)
+
+* Fungsi Path
+  - BeginPath()
+  - MoveTo(x, y)
+  - LineTo(x, y)
+  - QuadTo(cx, cy, x, y)
+  - CurveTo(cx1, cy1, cx2, cy2, x, y)
+  - ClosePath()
+  - DrawPath()
+
+* Fungsi Imej
+  - DrawImage(path, x, y)
+  - DrawImage(img, x, y)
+  - DrawImage(img, x, y, w, h)
+
+* Fungsi Papan Kekunci
+  - IsKeyDown(key)
+  - IsKB()
+  - Getch()
+
+* Fungsi Tetikus
+  - GetMouseX(), GetMouseY()
+  - IsMouseDown(button)
+  - GetMouseScrollWheel()
 
