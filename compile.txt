@@ -1,0 +1,24 @@
+
+Compile menggunakan javac + jar
+
+Linux/macOS:
+
+# di dalam my-graphics-lib/
+mkdir -p out
+# compile
+javac -d out $(find src -name "*.java")
+# buat jar dengan manifest
+jar cfm com.clay.graphics-1.0.0.jar manifest.mf -C out .
+# periksa isi jar
+jar tf com.clay.graphics-1.0.0.jar
+
+Windows:
+
+REM di dalam my-graphics-lib\
+mkdir out
+REM compile
+for /R src %%f in (*.java) do @echo %%f
+javac -d out src\com\clay\graphics\*.java
+REM buat jar
+jar cfm com.clay.graphics-1.0.0.jar manifest.mf -C out .
+jar tf com.clay.graphics-1.0.0.jar
