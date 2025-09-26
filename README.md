@@ -1,2 +1,31 @@
 # JGraphics
 Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. Ia adalah perpustakaan untuk grafik dan kawalan sederhana.
+
+# Ciri-ciri Konstanta dan Fungsi
+* Warna(ARGB)
+  - RED, GREEN, BLUE, BLACK, WHITE, TRANSPARENT, YELLOW, CYAN, MAGENTA, GRAY, SILVER, MAROON, OLIVE, LIME, TEAL, NAVY, PURPLE, ORANGE
+
+* Papan Kekunci
+  - KEY_ESCAPE, KEY_HOME, KEY_END, KEY_INSERT, KEY_DELETE
+  - KEY_PAGE_UP, KEY_PAGE_DOWN
+  - KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT
+  - KEY_F1 -> KEY_F9
+  - KEY_A -> KEY_Z
+  - KEY_0 -> KEY_9
+ 
+* Tetikus
+  - MOUSE_BUTTON_LEFT
+  - MOUSE_BUTTON_MIDDLE
+  - MOUSE_BUTTON_RIGHT
+
+* Graviti Text
+  - TEXT_GRAVITY_TOP
+  - TEXT_GRAVITY_CENTER_TOP
+  - TEXT_GRAVITY_RIGHT_TOP
+  - TEXT_GRAVITY_LEFT_CENTER
+  - TEXT_GRAVITY_CENTER
+  - TEXT_GRAVITY_RIGHT_CENTER
+  - TEXT_GRAVITY_LEFT_BOTTOM
+  - TEXT_GRAVITY_CENTER_BOTTOM
+  - TEXT_GRAVITY_RIGHT_BOTTOM
+
