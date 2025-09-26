@@ -13,18 +13,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 public final class JGraphics {
+    private static String launchApp;
 
     static {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        String launch = "Unknown";
+        launchApp = "Unknown";
         for (StackTraceElement element : stackTrace) {
             if (!element.getClassName().startsWith("com.clay.graphics.JGraphics") && !element.getClassName().startsWith("java.lang")) {
-                launch = element.getClassName();
+                launchApp = element.getClassName();
                 break;
             }
         }
         System.out.println("JGraphics v1.0");
-        System.out.println("launch : " + launch);
+        System.out.println("launch : " + launchApp);
     }
 
     public static final int RED = 0xFFFF0000;
@@ -207,6 +208,41 @@ public final class JGraphics {
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             window.setResizable(false);
             window.setLayout(new BorderLayout());
+
+            JMenuBar menuBar = new JMenuBar();
+
+            JMenu menuFile = new JMenu("File");
+            JMenuItem launchItem = new JMenuItem("Launch");
+            JMenuItem aboutItem = new JMenuItem("About");
+            JMenuItem exitItem = new JMenuItem("Exit");
+
+            menuFile.add(launchItem);
+            menuFile.add(aboutItem);
+            menuFile.add(exitItem);
+            menuBar.add(menuFile);
+
+            launchItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JOptionPane.showMessageDialog(window, "launch: " + launchApp, "Launch", JOptionPane.INFORMATION_MESSAGE);
+                }
+            });
+
+            aboutItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JOptionPane.showMessageDialog(window, "JGraphics v1.0 by Clay\n\n    Name : JGraphics\n    Package : com.clay.graphics\n    Library : jgraphics-1.0.jar\n    Version : 1.0\n    Author : Clay", "About", JOptionPane.INFORMATION_MESSAGE);
+                }
+            });
+
+            exitItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    CloseWindow();
+                }
+            });
+
+            window.setJMenuBar(menuBar);
 
             canvas.addKeyListener(new KeyListener() {
                 @Override
