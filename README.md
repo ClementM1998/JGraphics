@@ -125,9 +125,9 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
   ```java
   - GetMouseX(), GetMouseY()
   - IsMouseDown(button)
+  - GetMouseScrollWheel()
   ```
 
 
 
-  - GetMouseScrollWheel()
 
