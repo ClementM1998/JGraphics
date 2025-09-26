@@ -200,7 +200,6 @@ public final class JGraphics {
             window.setResizable(false);
             window.setLayout(new BorderLayout());
 
-            // handler
             canvas.addKeyListener(new KeyListener() {
                 @Override
                 public void keyTyped(KeyEvent e) {}
@@ -209,9 +208,6 @@ public final class JGraphics {
                 public void keyPressed(KeyEvent e) {
                     lastchar = e.getKeyChar();
                     int code = e.getKeyCode();
-                    //int code = e.getKeyCode() & 0xFF;
-                    //if (!keyDown[code]) keyPressed.add(code);
-                    //keyDown[code] = true;
                     if (code >= 0 && code < keyDown.length) {
                         if (!keyDown[code]) keyPressed.add(code);
                         keyDown[code] = true;
@@ -222,9 +218,6 @@ public final class JGraphics {
                 public void keyReleased(KeyEvent e) {
                     lastchar = '\0';
                     int code = e.getKeyCode();
-                    //int code = e.getKeyCode() & 0xFF;
-                    //keyDown[code] = false;
-                    //keyReleased.add(code);
                     if (code >= 0 && code < keyDown.length) {
                         keyDown[code] = false;
                         keyReleased.add(code);
@@ -290,7 +283,6 @@ public final class JGraphics {
             });
 
             canvas.setFocusable(true);
-            //canvas.requestFocusInWindow();
 
             window.add(canvas, BorderLayout.CENTER);
             window.pack();
@@ -301,6 +293,7 @@ public final class JGraphics {
 
             canvas.createBufferStrategy(3);
             bufferStrategy = canvas.getBufferStrategy();
+
             initialized = true;
         };
 
@@ -313,8 +306,6 @@ public final class JGraphics {
 
     public static void ClearWindow() {
         beginFrame();
-        //g2d.setColor(backgroundColor);
-        //g2d.fillRect(0, 0, GetWindowWidth(), GetWindowHeight());
         if (g2d != null) {
             g2d.setColor(backgroundColor);
             g2d.fillRect(0, 0, GetWindowWidth(), GetWindowHeight());
@@ -468,6 +459,15 @@ public final class JGraphics {
         int blue = color & 0xFF;
         fillColor = new Color(red, green, blue, newAlpha);
         filled = true;
+    }
+
+    public static void SetCurrentColor(int color) {
+        SetCurrentColor(color, color);
+    }
+
+    public static void SetCurrentColor(int color, int fill) {
+        SetColor(color);
+        SetFillColor(fill);
     }
 
     public static void SetAntialias(boolean antialis) {
@@ -782,23 +782,12 @@ public final class JGraphics {
     }
 
     public static boolean IsKeyDown(int key) {
-        //return keyDown[key & 0xFF];
         if (key < 0 || key >= keyDown.length) return false;
         return keyDown[key];
     }
 
-    public static boolean IsKeyPressed(int key) {
-        return keyPressed.contains(key);
-    }
-
-    public static boolean IsKeyReleased(int key) {
-        return keyReleased.contains(key);
-    }
-
     public static boolean IsKB() {
         for (boolean kd : keyDown) if (kd) return true;
-        //if (!keyPressed.isEmpty() || !keyReleased.isEmpty()) return true;
-        //return false;
         return !keyPressed.isEmpty() || !keyReleased.isEmpty();
     }
 
@@ -816,18 +805,6 @@ public final class JGraphics {
 
     public static boolean IsMouseDown(int button) {
         return (button >= 0 && button < mouseDown.length) && mouseDown[button];
-    }
-
-    public static boolean IsMousePressed(int button) {
-        return mousePressed.contains(button);
-    }
-
-    public static boolean IsMouseReleased(int button) {
-        return mouseReleased.contains(button);
-    }
-
-    public static int GetMouseWheelRotation() {
-        return mouseWheelRotation;
     }
 
     public static int GetMouseScrollWheel() {
