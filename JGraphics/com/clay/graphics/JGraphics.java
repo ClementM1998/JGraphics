@@ -15,8 +15,16 @@ import java.util.Set;
 public final class JGraphics {
 
     static {
-        System.out.println("JGraphics");
-        System.out.println("v1.0");
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        String launch = "Unknown";
+        for (StackTraceElement element : stackTrace) {
+            if (!element.getClassName().startsWith("com.clay.graphics.JGraphics") && !element.getClassName().startsWith("java.lang")) {
+                launch = element.getClassName();
+                break;
+            }
+        }
+        System.out.println("JGraphics v1.0");
+        System.out.println("launch : " + launch);
     }
 
     public static final int RED = 0xFFFF0000;
@@ -142,15 +150,15 @@ public final class JGraphics {
     private static int currentTextY = 0;
 
     private enum TextGravity {
-        LEFT_TOP,            // x = 0, y = 0
-        CENTER_TOP,          // x = width/2, y = 0
-        RIGHT_TOP,           // x = width - textwidth, y = 0
-        LEFT_CENTER,         // x = 0, y = height/2
-        CENTER,              // x = width/2, y = height/2
-        RIGHT_CENTER,        // x = width - textwidth, y = height/2
-        LEFT_BOTTOM,         // x = 0, y = height - textheight
-        CENTER_BOTTOM,       // x = width/2, y = height - textheight
-        RIGHT_BOTTOM         // x = width - textwidth, y = height - textheight
+        LEFT_TOP,
+        CENTER_TOP,
+        RIGHT_TOP,
+        LEFT_CENTER,
+        CENTER,
+        RIGHT_CENTER,
+        LEFT_BOTTOM,
+        CENTER_BOTTOM,
+        RIGHT_BOTTOM
     }
 
     public static final TextGravity TEXT_GRAVITY_LEFT_TOP = TextGravity.LEFT_TOP;
