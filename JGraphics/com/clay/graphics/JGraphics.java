@@ -538,12 +538,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillRect(l, t, r, b);
-            g().setColor(currentColor);
-            g().drawRect(l, t, r, b);
-        } else {
-            g().setColor(currentColor);
-            g().drawRect(l, t, r, b);
         }
+        g().setColor(currentColor);
+        g().drawRect(l, t, r, b);
     }
 
     public static void Square(int x1, int y1, int size) {
@@ -554,12 +551,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillRect(l, t, r, b);
-            g().setColor(currentColor);
-            g().drawRect(l, t, r, b);
-        } else {
-            g().setColor(currentColor);
-            g().drawRect(l, t, r, b);
         }
+        g().setColor(currentColor);
+        g().drawRect(l, t, r, b);
     }
 
     public static void Circle(int x, int y, int radius) {
@@ -570,12 +564,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillOval(l, t, r, b);
-            g().setColor(currentColor);
-            g().drawOval(l, t, r, b);
-        } else {
-            g().setColor(currentColor);
-            g().drawOval(l, t, r, b);
         }
+        g().setColor(currentColor);
+        g().drawOval(l, t, r, b);
     }
 
     public static void Ellipse(int x, int y, int w, int h) {
@@ -586,12 +577,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillOval(l, t, r, b);
-            g().setColor(currentColor);
-            g().drawOval(l, t, r, b);
-        } else {
-            g().setColor(currentColor);
-            g().drawOval(l, t, r, b);
         }
+        g().setColor(currentColor);
+        g().drawOval(l, t, r, b);
     }
 
     public static void Polygon(int[] x, int[] y, int num) {
@@ -601,12 +589,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillPolygon(x, y, num);
-            g().setColor(currentColor);
-            g().drawPolygon(x, y, num);
-        } else {
-            g().setColor(currentColor);
-            g().drawPolygon(x, y, num);
         }
+        g().setColor(currentColor);
+        g().drawPolygon(x, y, num);
     }
 
     public static void Polygon(int[] x, int[] y) {
@@ -617,12 +602,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillPolygon(x, y, num);
-            g().setColor(currentColor);
-            g().drawPolygon(x, y, num);
-        } else {
-            g().setColor(currentColor);
-            g().drawPolygon(x, y, num);
         }
+        g().setColor(currentColor);
+        g().drawPolygon(x, y, num);
     }
 
     public static void Triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
@@ -632,12 +614,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillPolygon(xpoint, ypoint, num);
-            g().setColor(currentColor);
-            g().drawPolygon(xpoint, ypoint, num);
-        } else {
-            g().setColor(currentColor);
-            g().drawPolygon(xpoint, ypoint, num);
         }
+        g().setColor(currentColor);
+        g().drawPolygon(xpoint, ypoint, num);
     }
 
     public static void Arc(int x, int y, int w, int h, int start, int sweep) {
@@ -648,12 +627,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillArc(l, t, r, b, start, sweep);
-            g().setColor(currentColor);
-            g().drawArc(l, t, r, b, start, sweep);
-        } else {
-            g().setColor(currentColor);
-            g().drawArc(l, t, r, b, start, sweep);
         }
+        g().setColor(currentColor);
+        g().drawArc(l, t, r, b, start, sweep);
     }
 
     public static void Arc(int x, int y, int radius, int start, int sweep) {
@@ -664,12 +640,9 @@ public final class JGraphics {
         if (filled) {
             g().setColor(fillColor);
             g().fillArc(l, t, r, b, start, sweep);
-            g().setColor(currentColor);
-            g().drawArc(l, t, r, b, start, sweep);
-        } else {
-            g().setColor(currentColor);
-            g().drawArc(l, t, r, b, start, sweep);
         }
+        g().setColor(currentColor);
+        g().drawArc(l, t, r, b, start, sweep);
     }
 
     private static void drawTextWithGravity(String text, int offsetX, int offsetY) {
