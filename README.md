@@ -24,7 +24,7 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
 
 * Graviti Teks
   ```java
-  - TEXT_GRAVITY_TOP
+  - TEXT_GRAVITY_LEFT_TOP
   - TEXT_GRAVITY_CENTER_TOP
   - TEXT_GRAVITY_RIGHT_TOP
   - TEXT_GRAVITY_LEFT_CENTER
