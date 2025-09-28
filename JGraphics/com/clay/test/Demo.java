@@ -7,7 +7,7 @@ public class Demo {
 
         CreateWindow("Demo");
 
-        while (!IsKB()) {
+        while (!IsKeyDown(KEY_ESCAPE)) {
             ClearWindow();
 
             RefreshWindow();
