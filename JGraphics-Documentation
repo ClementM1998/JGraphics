@@ -1,0 +1,161 @@
+
+Dokumentasi JGraphics
+
+Konsta Warna:
+
+| Nama Konstanta | Kod          | Kegunaan       |
+| -------------- | ------------ | -------------- |
+| `RED`          | `0xFFFF0000` | Warna merah    |
+| `GREEN`        | `0xFF00FF00` | Warna hijau    |
+| `BLUE`         | `0xFF0000FF` | Warna biru     |
+| `BLACK`        | `0xFF000000` | Warna hitam    |
+| `WHITE`        | `0xFFFFFFFF` | Warna putih    |
+| `TRANSPARENT`  | `0x00000000` | Warna lutsinar |
+| `YELLOW`       | `0xFFFFFF00` | Warna kuning   |
+| `CYAN`         | `0xFF00FFFF` | Warna cyan     |
+| `MAGENTA`      | `0xFFFF00FF` | Warna magenta  |
+| `GRAY`         | `0xFF808080` | Warna kelabu   |
+| `SILVER`       | `0xFFC0C0C0` | Warna perak    |
+| `MAROON`       | `0xFF800000` | Warna maroon   |
+| `OLIVE`        | `0xFF808000` | Warna olive    |
+| `LIME`         | `0xFF00FF00` | Warna lime     |
+| `TEAL`         | `0xFF008080` | Warna teal     |
+| `NAVY`         | `0xFF000080` | Warna navy     |
+| `PURPLE`       | `0xFF800080` | Warna ungu     |
+| `ORANGE`       | `0xFFFFA500` | Warna jingga   |
+
+Konsta Papan Kekunci:
+
+| Nama Konstanta                                                          | Kegunaan                           |
+| ----------------------------------------------------------------------- | ---------------------------------- |
+| `KEY_ESCAPE`, `KEY_HOME`, `KEY_UP`, `KEY_DOWN`, `KEY_LEFT`, `KEY_RIGHT` | Kekunci kawalan arah & fungsi asas |
+| `KEY_PAGE_UP`, `KEY_PAGE_DOWN`, `KEY_INSERT`, `KEY_DELETE`, `KEY_END`   | Kekunci kawalan tambahan           |
+| `KEY_F1 … KEY_F9`                                                       | Kekunci fungsi F1–F9               |
+| `KEY_A … KEY_Z`                                                         | Abjad A hingga Z                   |
+| `KEY_0 … KEY_9`                                                         | Angka 0 hingga 9                   |
+
+Konsta Tetikus:
+
+| Nama Konstanta        | Kegunaan                    |
+| --------------------- | --------------------------- |
+| `MOUSE_BUTTON_LEFT`   | Klik kiri                   |
+| `MOUSE_BUTTON_MIDDLE` | Klik tengah (scroll button) |
+| `MOUSE_BUTTON_RIGHT`  | Klik kanan                  |
+
+Konsta TextGravity:
+
+| Nama Konstanta               | Kegunaan                  |
+| ---------------------------- | ------------------------- |
+| `TEXT_GRAVITY_LEFT_TOP`      | Teks melekat di kiri atas |
+| `TEXT_GRAVITY_CENTER_TOP`    | Teks di tengah atas       |
+| `TEXT_GRAVITY_RIGHT_TOP`     | Teks di kanan atas        |
+| `TEXT_GRAVITY_LEFT_CENTER`   | Teks di kiri tengah       |
+| `TEXT_GRAVITY_CENTER`        | Teks di tengah-tengah     |
+| `TEXT_GRAVITY_RIGHT_CENTER`  | Teks di kanan tengah      |
+| `TEXT_GRAVITY_LEFT_BOTTOM`   | Teks di kiri bawah        |
+| `TEXT_GRAVITY_CENTER_BOTTOM` | Teks di tengah bawah      |
+| `TEXT_GRAVITY_RIGHT_BOTTOM`  | Teks di kanan bawah       |
+
+Fungsi Window:
+
+| Fungsi                                     | Kegunaan                                       |
+| ------------------------------------------ | ---------------------------------------------- |
+| `CreateWindow(title)`                      | Buka tetingkap grafik dengan tajuk             |
+| `CreateWindow(title, width, height)`       | Buka tetingkap dengan saiz tertentu            |
+| `CreateWindow(title, x, y, width, height)` | Buka tetingkap pada posisi `(x,y)` dengan saiz |
+| `ClearWindow()`                            | Kosongkan skrin                                |
+| `RefreshWindow()`                          | Kemaskini paparan (double-buffering)           |
+| `CloseWindow()`                            | Tutup tetingkap                                |
+| `GetWindowTitle()`                         | Dapatkan tajuk window                          |
+| `GetX(), GetY()`                           | Koordinat posisi window pada skrin             |
+| `GetWindowWidth(), GetWindowHeight()`      | Saiz window                                    |
+| `SetFrameRate(fps)`                        | Tetapkan refresh rate (FPS)                    |
+| `Delay(ms)`                                | Tahan masa dalam milisaat                      |
+| `SetBackgroundWindow(color)`               | Tetapkan warna latar belakang                  |
+| `GetBackgroundWindow()`                    | Ambil warna latar belakang                     |
+
+Fungsi Warna dan Fill:
+
+| Fungsi                         | Kegunaan                                |
+| ------------------------------ | --------------------------------------- |
+| `SetColor(color)`              | Tetapkan warna lukisan                  |
+| `SetColor(color, alpha)`       | Tetapkan warna + tahap lutsinar         |
+| `SetFillColor(color)`          | Tetapkan warna isian                    |
+| `SetFillColor(color, alpha)`   | Tetapkan warna isian + alpha            |
+| `SetCurrentColor(color)`       | Warna stroke & fill sekali              |
+| `SetCurrentColor(color, fill)` | Stroke & fill berbeza                   |
+| `SetAntialias(boolean)`        | Hidupkan/matikan antialiasing           |
+| `SetStroke(float)`             | Tetapkan ketebalan garis                |
+| `SetFilled(boolean)`           | Tentukan sama ada bentuk diwarnakan isi |
+
+Fungsi Teks:
+
+| Fungsi                    | Kegunaan                              |
+| ------------------------- | ------------------------------------- |
+| `SetFontName(name)`       | Tukar nama font                       |
+| `SetFontStyle(style)`     | Tukar gaya font (plain, bold, italic) |
+| `SetFontSize(size)`       | Tukar saiz font                       |
+| `SetTextGravity(gravity)` | Tetapkan penjajaran teks              |
+| `GetTextWidth(text)`      | Ambil lebar teks                      |
+| `GetTextHeight(text)`     | Ambil tinggi teks                     |
+| `Text(text, x, y)`        | Tulis teks di posisi `(x,y)`          |
+| `Text(text)`              | Tulis teks ikut gravity semasa        |
+
+Fungsi Bentuk Geometri:
+
+| Fungsi                        | Kegunaan               |
+| ----------------------------- | ---------------------- |
+| `Point(x,y)`                  | Lukis titik            |
+| `Line(x1,y1,x2,y2)`           | Lukis garisan          |
+| `Rectangle(x1,y1,x2,y2)`      | Lukis segi empat tepat |
+| `Square(x,y,size)`            | Lukis segi empat sama  |
+| `Circle(x,y,radius)`          | Lukis bulatan          |
+| `Ellipse(x,y,w,h)`            | Lukis elips            |
+| `Polygon(x[],y[],num)`        | Lukis poligon          |
+| `Triangle(x1,y1,x2,y2,x3,y3)` | Lukis segitiga         |
+| `Arc(x,y,w,h,start,sweep)`    | Lukis arka elips       |
+| `Arc(x,y,r,start,sweep)`      | Lukis arka bulatan     |
+
+Fungsi Path (Bentuk Tersuai):
+
+| Fungsi                         | Kegunaan                          |
+| ------------------------------ | --------------------------------- |
+| `BeginPath()`                  | Mula bentuk custom                |
+| `MoveTo(x,y)`                  | Alihkan kursor ke titik           |
+| `LineTo(x,y)`                  | Lukis garis dari titik sebelumnya |
+| `QuadTo(cx,cy,x,y)`            | Lukis quadratic bezier curve      |
+| `CurveTo(cx1,cy1,cx2,cy2,x,y)` | Lukis cubic bezier curve          |
+| `ClosePath()`                  | Tutup path                        |
+| `DrawPath()`                   | Lukis bentuk path                 |
+
+Fungsi Imej:
+
+| Fungsi                   | Kegunaan                     |
+| ------------------------ | ---------------------------- |
+| `DrawImage(path,x,y)`    | Papar imej fail di `(x,y)`   |
+| `DrawImage(img,x,y)`     | Papar `Image` di `(x,y)`     |
+| `DrawImage(img,x,y,w,h)` | Papar imej bersaiz ubah suai |
+
+Fungsi Input:
+
+| Fungsi                     | Kegunaan                      |
+| -------------------------- | ----------------------------- |
+| `IsKeyDown(key)`           | Semak jika kekunci ditekan    |
+| `IsKB()`                   | Semak ada input keyboard      |
+| `Getch()`                  | Dapatkan kod kekunci terakhir |
+| `GetMouseX(), GetMouseY()` | Posisi tetikus                |
+| `IsMouseDown(button)`      | Semak klik tetikus            |
+| `GetMouseScrollWheel()`    | Nilai skrol roda tetikus      |
+
+Fungsi Transformasi:
+
+| Fungsi                     | Kegunaan                 |
+| -------------------------- | ------------------------ |
+| `ResetTransform()`         | Reset transform ke asal  |
+| `Translate(tx,ty)`         | Alihkan koordinat        |
+| `Scale(sx,sy)`             | Skala relatif            |
+| `Rotate(theta)`            | Putarkan koordinat       |
+| `SaveTransform()`          | Simpan keadaan transform |
+| `RestoreTransform()`       | Pulihkan transform       |
+| `SetScale(sx,sy)`          | Tetapkan skala mutlak    |
+| `GetScaleX(), GetScaleY()` | Ambil nilai skala semasa |
