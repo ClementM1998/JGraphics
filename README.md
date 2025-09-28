@@ -4,8 +4,8 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
 # **Ciri-ciri Konstanta dan Fungsi**
 * Warna(ARGB)
   ```java
-  - RED // warna merah
-  - GREEN // warna hijau
+  - RED
+  - GREEN
   - BLUE
   - BLACK
   - WHITE
