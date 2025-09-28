@@ -4,7 +4,24 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
 # **Ciri-ciri Konstanta dan Fungsi**
 * Warna(ARGB)
   ```java
-  - RED, GREEN, BLUE, BLACK, WHITE, TRANSPARENT, YELLOW, CYAN, MAGENTA, GRAY, SILVER, MAROON, OLIVE, LIME, TEAL, NAVY, PURPLE, ORANGE
+  - RED // warna merah
+  - GREEN // warna hijau
+  - BLUE
+  - BLACK
+  - WHITE
+  - TRANSPARENT
+  - YELLOW
+  - CYAN
+  - MAGENTA
+  - GRAY
+  - SILVER
+  - MAROON
+  - OLIVE
+  - LIME
+  - TEAL
+  - NAVY
+  - PURPLE
+  - ORANGE
   ```
 
 * Papan Kekunci
