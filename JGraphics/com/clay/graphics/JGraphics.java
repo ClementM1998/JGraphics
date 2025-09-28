@@ -886,4 +886,23 @@ public final class JGraphics {
         }
     }
 
+    private static double scaleX = 1.0;
+    private static double scaleY = 1.0;
+
+    public static void SetScale(double sx, double sy) {
+        scaleX = sx;
+        scaleY = sy;
+        currentTransform = new AffineTransform();
+        currentTransform.scale(scaleX, scaleY);
+        g().setTransform(currentTransform);
+    }
+
+    public static double GetScaleX() {
+        return scaleX;
+    }
+
+    public static double GetScaleY() {
+        return scaleY;
+    }
+
 }
