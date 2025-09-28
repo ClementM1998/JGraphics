@@ -39,9 +39,9 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
 
 * Fungsi Window
   ```java
-  - CreateWindow(title)
-  - CreateWindow(title, width, height)
-  - CreateWindow(title, x, y, width, height)
+  - CreateWindow(String title)
+  - CreateWindow(String title, int width, int height)
+  - CreateWindow(String title, int x, int y, int width, int height)
   - ClearWindow()
   - RefreshWindow()
   - CloseWindow()
@@ -50,73 +50,73 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
   - GetY()
   - GetWindowWidth()
   - GetWindowHeight()
+  - SetBackgroundWindow(int color), GetBackgroundWindow()
   ```
 
 * Fungsi Kawalan Masa
   ```java
-  - SetFrameRate(fps)
-  - Delay(ms)
+  - SetFrameRate(int fps)
+  - Delay(long ms)
   ```
 
 * Fungsi Warna dan Lukisan
   ```java
-  - SetBackgroundWindow(color), GetBackgroundWindow()
-  - SetColor(color), SetColor(color, alpha)
-  - SetFillColor(color), SetColor(color, alpha)
-  - SetCurrentColor(color), SetCurrentColor(color, fill)
-  - SetAntialias(antialias)
-  - SetStroke(size)
-  - SetFilled(fill)
+  - SetColor(int color), SetColor(int color, int alpha)
+  - SetFillColor(int color), SetColor(int color, int alpha)
+  - SetCurrentColor(int color), SetCurrentColor(int color, int fill)
+  - SetAntialias(boolean antialias)
+  - SetStroke(int size)
+  - SetFilled(boolean fill)
   ```
 
 * Fungsi Teks
   ```java
-  - SetFontName(name)
-  - SetFontStyle(style)
-  - SetFontSize(size)
-  - SetTextGravity(gravity)
-  - GetTextWidth(text)
-  - GetTextHeight(text)
-  - Text(text, x, y)
-  - Text(text)
+  - SetFontName(String name)
+  - SetFontStyle(int style)
+  - SetFontSize(int size)
+  - SetTextGravity(TextGravity gravity)
+  - GetTextWidth(String text)
+  - GetTextHeight(String text)
+  - Text(String text, int x, int y)
+  - Text(String text)
   ```
 
 * Fungsi Bentuk
   ```java
-  - Point(x, y)
-  - Line(x1, y1, x2, y2)
-  - Rectangle(x1, y1, x2, y2)
-  - Square(x, y, size)
-  - Circle(x, y, radius)
-  - Ellipse(x, y, w, h)
-  - Polygon(x[], y[], num)
-  - Polygon(x[], y[])
-  - Triangle(x1, y1, x2, y2, x3, y3)
-  - Arc(x, y, w, h, start, sweep)
-  - Arc(x, y, radius, start, sweep)
+  - Point(int x, int y)
+  - Line(int x1, int y1, int x2, int y2)
+  - Rectangle(int x1, int y1, int x2, int y2)
+  - Square(int x, int y, int size)
+  - Circle(int x, int y, int radius)
+  - Ellipse(int x, int y, int w, int h)
+  - Polygon(int x[], int y[], int num)
+  - Polygon(int x[], int y[])
+  - Triangle(int x1, int y1, int x2, int y2, int x3, int y3)
+  - Arc(int x, int y, int w, int h, int start, int sweep)
+  - Arc(int x, int y, int radius, int start, int sweep)
   ```
 
 * Fungsi Path
   ```java
   - BeginPath()
-  - MoveTo(x, y)
-  - LineTo(x, y)
-  - QuadTo(cx, cy, x, y)
-  - CurveTo(cx1, cy1, cx2, cy2, x, y)
+  - MoveTo(float x, float y)
+  - LineTo(float x, float y)
+  - QuadTo(int cx, int cy, int x, int y)
+  - CurveTo(int cx1, int cy1, int cx2, int cy2, int x, int y)
   - ClosePath()
   - DrawPath()
   ```
 
 * Fungsi Imej
   ```java
-  - DrawImage(path, x, y)
-  - DrawImage(img, x, y)
-  - DrawImage(img, x, y, w, h)
+  - DrawImage(String path, int x, int y)
+  - DrawImage(Image img, int x, int y)
+  - DrawImage(Image img, int x, int y, int w, int h)
   ```
 
 * Fungsi Papan Kekunci
   ```java
-  - IsKeyDown(key)
+  - IsKeyDown(int key)
   - IsKB()
   - Getch()
   ```
@@ -124,10 +124,22 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
 * Fungsi Tetikus
   ```java
   - GetMouseX(), GetMouseY()
-  - IsMouseDown(button)
+  - IsMouseDown(int button)
   - GetMouseScrollWheel()
   ```
 
+* Transformasi dan Skala
+  ```java
+  - ResetTransform()
+  - Translate(double tx, double ty)
+  - Scale(double sx, double sy)
+  - Rotate(double theta)
+  - SaveTransform()
+  - RestoreTransform()
+  - SetScale(double sx, double sy)
+  - GetScaleX()
+  - GetScaleY()
+  ```
 
 
 
