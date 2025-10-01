@@ -26,7 +26,7 @@ Ini adalah sebuah perpustakaan JGraphics yang di bina menggunakan bahasa Java. I
 
 * Papan Kekunci
   ```java
-  - KEY_ESCAPE, KEY_HOME, KEY_END, KEY_INSERT, KEY_DELETE
+  - KEY_ESCAPE, KEY_HOME, KEY_END, KEY_INSERT, KEY_DELETE, KEY_SPACE
   - KEY_PAGE_UP, KEY_PAGE_DOWN
   - KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT
   - KEY_F1 -> KEY_F9
