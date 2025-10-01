@@ -58,6 +58,7 @@ public final class JGraphics {
     public static final int KEY_PAGE_DOWN = KeyEvent.VK_PAGE_DOWN;
     public static final int KEY_INSERT = KeyEvent.VK_INSERT;
     public static final int KEY_DELETE = KeyEvent.VK_DELETE;
+    public static final int KEY_SPACE = KeyEvent.VK_SPACE;
     public static final int KEY_F1 = KeyEvent.VK_F1;
     public static final int KEY_F2 = KeyEvent.VK_F2;
     public static final int KEY_F3 = KeyEvent.VK_F3;
